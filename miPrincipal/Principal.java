@@ -1,22 +1,35 @@
 package miPrincipal;
 import pila.Pila;
-public class Principal {
-    public static void main(String[] args) {
-        //crear una pila de enteros 
-        Pila<Integer> pila = new Pila<>();
-        //apilamos algunos elementos
-        pila.apilar(2);
-        pila.apilar(5);
-        pila.apilar(7);
-        System.out.println("El tope de la pila es: " + pila.cima());
-        pila.retirar();
-        System.out.println("El tope de la pila es: " + pila.cima());
-        pila.retirar();
-        System.out.println("El tope de la pila es: " + pila.cima());
-        pila.retirar();
-        System.out.println("El tope de la pila es: " + pila.cima());
-        pila.apilar(10);
-        pila.apilar(20);
-        System.out.println("El tamaño de la pila es: " + pila.getTamanio());
+import java.util.Scanner;
+public class Principal{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int opc;
+        do{
+            menu();
+            opc = sc.nextInt();
+            switch(opc){
+                case 1:
+                AppPila.main(args);
+                break;
+                case 2:
+                AppStack.main(args);
+                break;
+                case 3:
+                break;
+                case 0:
+                System.out.println("Chao ");
+                break;
+                default:
+                System.out.println("   Opción no válida    ");
+                break;
+        }
+      }while(opc != 0);
+        sc.close();
+  }
+
+    private static void menu() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'menu'");
     }
 }
