@@ -3,6 +3,8 @@ public class Cola<T> {
     //atributos
     private Nodo<T> cabeza;
     private int tamanio;
+    private int cola;
+
     //constructores
     public Cola() {
         cabeza = null;
@@ -21,6 +23,12 @@ public class Cola<T> {
     public void setTamanio(int tamanio) {
         this.tamanio = tamanio;
     }
+    public int getCola() {
+        return cola;
+    }
+    public void setCola(int cola) {
+        this.cola = cola;
+    }
     //confirma si la pila esta vacia 
     public boolean esVacia() {
         /*if(tamanio == 0){
@@ -31,13 +39,14 @@ public class Cola<T> {
         return cabeza == null;
     }
     //agrega un nuevo nodo a la pila
-    public void apilar(T valor){
+    public void encolar(T valor){
         Nodo<T> nuevo = new Nodo<>();
         //fija el valor a nuevo nodo
         nuevo.setValor(valor);
         if (esVacia()) {
             //cabeza apunta al nuevo
             cabeza = nuevo; 
+            cola= nuevo;
         }else{
             //se enlaza el cambio siguiente de nuevo al nodo cabeza
             nuevo.setSiguiente(cabeza);
@@ -47,19 +56,29 @@ public class Cola<T> {
         tamanio++;
     }
     //elimina el ultimo nodo de la pila 
-    public void retirar(){
+    public void desencolar(){
         if(!esVacia()){
-            cabeza = cabeza.getSiguiente();
+            //verificar si hay un solo elemento en la cola 
+            if(cabeza==cola){
+                cabeza = null;
+                cola = null;
+            }else{//hay mas elemento en la cola 
+                //se elimina el primer elemento en la cola
+                //desplazando la cabeza al siguiente 
+                cabeza = cabeza.getSiguiente();  
+
+            }
             tamanio--;
         }
     }
     //regresa el valor del tope de la fila 
-    public T cima(){
+    public T frente(){
         if(!esVacia()){
             return cabeza.getValor();
         }
         return null;
     }
+    
     public void push(int i) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'push'");
@@ -80,5 +99,6 @@ public class Cola<T> {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'peek'");
     }
+    
 }
     

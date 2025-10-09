@@ -3,7 +3,7 @@ package miPrincipal;
 import pilas.Delimitadores;
 
 public class AppDelimitadores {
-    public void inicio(){
+    public static void inicio(){
         Delimitadores objDelimitadores = new Delimitadores();
         String expr = "(a+b)/2";
         boolean resultado;
@@ -27,6 +27,9 @@ public class AppDelimitadores {
         if(resultado) System.out.println("La expresion "+expr+" es correcta");
         else System.out.println("La expresion "+expr+" es incorrecta");
 
+    }
+    public static void main(String[] args) {
+        inicio();
     }
     
 }

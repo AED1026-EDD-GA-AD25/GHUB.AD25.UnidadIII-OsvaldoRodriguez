@@ -16,6 +16,10 @@ public class Principal{
                 AppStack.main(args);
                 break;
                 case 3:
+                AppDelimitadores.main(args);
+                break;
+                case 4:
+                AppCola.main(args);
                 break;
                 case 0:
                 System.out.println("Chao ");
