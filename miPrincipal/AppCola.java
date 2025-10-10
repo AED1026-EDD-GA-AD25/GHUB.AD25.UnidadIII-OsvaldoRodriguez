@@ -11,7 +11,11 @@ public class AppCola {
         miCola.encolar(30);
         miCola.encolar(40);
         System.out.println("Tamaño de la cola "+miCola.getTamanio());
+         /*for(String it: miCola){ //¿Que hacer para que mi cola sea iterable? (Clase iterador)
+            System.out.println(it);
+        }*/
         miCola.desencolar();
+        System.out.println("Lista de elementos de la cola"+miCola.toString());
         System.out.println("El primer elemento de la cola "+miCola.frente());
         miCola.desencolar();
         System.out.println("El primer elemento de la cola "+miCola.frente());

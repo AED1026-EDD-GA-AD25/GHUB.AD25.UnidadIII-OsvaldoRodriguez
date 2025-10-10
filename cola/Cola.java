@@ -1,7 +1,7 @@
 package cola;
 public class Cola<T> {
     //atributos
-    private Nodo<T> cabeza;
+    private Nodo<T> cabeza; //como sobre escribo el metodo toString
     private int tamanio;
     private int cola;
 
@@ -79,26 +79,6 @@ public class Cola<T> {
         return null;
     }
     
-    public void push(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'push'");
-    }
-    public void pop() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pop'");
-    }
-    public Integer search(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'search'");
-    }
-    public String size() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'size'");
-    }
-    public String peek() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
-    }
     
 }
     
