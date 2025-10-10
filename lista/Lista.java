@@ -1,15 +1,13 @@
-package cola;
-public class Cola<T>/* implements iterable */ {
+package lista;
+public class Lista<T>/* implements iterable */ {
     //atributos
     private Nodo<T> cabeza; //como sobre escribo el metodo toString
     private int tamanio;
-    private Nodo<T> cola;
 
     //constructores
-    public Cola() {
+    public Lista() {
         cabeza = null;
         tamanio = 0;
-        cola = null;
     }
     //getter y setter
     public Nodo<T> getCabeza() {
@@ -24,7 +22,6 @@ public class Cola<T>/* implements iterable */ {
     public void setTamanio(int tamanio) {
         this.tamanio = tamanio;
     }
-
     //confirma si la pila esta vacia 
     public boolean esVacia() {
         /*if(tamanio == 0){
@@ -32,24 +29,27 @@ public class Cola<T>/* implements iterable */ {
         }else{
             return false;
         }*/
-        return cola == null;
+        return cabeza == null;
     }
-    //agrega un nuevo nodo a la pila
-    public void encolar(T valor){
+    //agrega un nuevo nodo al final de la lista
+    public void agregar(T valor){
         Nodo<T> nuevo = new Nodo<>();
         //fija el valor a nuevo nodo
         nuevo.setValor(valor);
         if (esVacia()) {
             //cabeza apunta al nuevo
-            cabeza = nuevo; 
-            cola= nuevo;
+            cabeza = nuevo;
         }else{
-            //se enlaza el cambio siguiente de nuevo al nodo cabeza
-            nuevo.setSiguiente(cabeza);
+            //se agrega al final de la cola 
+            Nodo<T> aux = cabeza;
+            while(aux.getSiguiente() != null){
+                aux= aux.getSiguiente();
+            }
+            aux.getSiguiente(nuevo);
             //la nueva cabeza de la pila pasa a ser nuevo
-            cola = nuevo;
         }
         tamanio++;
+        /*pendiente */
     }
     //elimina el ultimo nodo de la pila 
     public void desencolar(){

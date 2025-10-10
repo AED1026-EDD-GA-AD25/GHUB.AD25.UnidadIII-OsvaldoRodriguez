@@ -34,7 +34,7 @@ public class AppStack {
             else System.out.println("El elemento 40 no se encuentra en la pila");
             System.out.println("El tamaño de la pila es: " + pila.size());
         }catch(EmptyStackException e){
-            System.out.println("Pila vacía = "e.getMessage());
+            System.out.println("Pila vacía = "+e.getMessage());
             
             
 

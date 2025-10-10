@@ -16,14 +16,14 @@ public class AppDelimitadores {
         if(resultado) System.out.println("La expresion "+expr+" es correcta");
         else System.out.println("La expresion "+expr+" es incorrecta");
 
-         expr = "while (n<(n[8] +o))  ( "+"int p=7 "+" /*comentarios*/"+")"; 
-         resultado = objDelimitadores.evaluacionDelimitadores(expr);
+        expr = "while (n<(n[8] +o))  ( "+"int p=7 "+" /*comentarios*/"+")"; 
+        resultado = objDelimitadores.evaluacionDelimitadores(expr);
         if(resultado) System.out.println("La expresion "+expr+" es correcta");
         else System.out.println("La expresion "+expr+" es incorrecta");
 
 
-         expr = "while (n<(n[8] +o))  "+"int p=7 "+" /*comentarios*/"+")"; 
-         resultado = objDelimitadores.evaluacionDelimitadores(expr);
+        expr = "while (n<(n[8] +o))  "+"int p=7 "+" /*comentarios*/"+")"; 
+        resultado = objDelimitadores.evaluacionDelimitadores(expr);
         if(resultado) System.out.println("La expresion "+expr+" es correcta");
         else System.out.println("La expresion "+expr+" es incorrecta");
 
