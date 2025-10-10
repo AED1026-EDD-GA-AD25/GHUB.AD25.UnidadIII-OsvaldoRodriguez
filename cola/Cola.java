@@ -1,5 +1,5 @@
 package cola;
-public class Cola<T> {
+public class Cola<T>/* implements iterable */ {
     //atributos
     private Nodo<T> cabeza; //como sobre escribo el metodo toString
     private int tamanio;
