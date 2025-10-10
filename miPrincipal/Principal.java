@@ -21,6 +21,9 @@ public class Principal{
                 case 4:
                 AppCola.main(args);
                 break;
+                case 5:
+                AppQueue.main(args);
+                break;
                 case 0:
                 System.out.println("Chao ");
                 break;
@@ -32,8 +35,15 @@ public class Principal{
         sc.close();
   }
 
-    private static void menu() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'menu'");
+     private static void menu(){
+        System.out.println("--- Menu principal ---");
+        System.out.println("1.- Pilas");
+        System.out.println("2.- Stack");
+        System.out.println("3.- Delimitadores");
+        System.out.println("4.- Cola");
+        System.out.println("5.- Queue");
+        System.out.println("0.- salir");
+        System.out.println();
+        System.out.println("Por favor seleccione la opcion deseada");
     }
 }
