@@ -2,6 +2,9 @@
 ./cola/Nodo.java
 ./miTest/AppTest.java
 ./pilas/Delimitadores.java
+./lista/Lista.java
+./lista/Nodo.java
+./lista/PosicionIlegalException.java
 ./pila/Pila.java
 ./pila/Nodo.java
 ./miPrincipal/AppCola.java

@@ -45,30 +45,52 @@ public class Lista<T>/* implements iterable */ {
             while(aux.getSiguiente() != null){
                 aux= aux.getSiguiente();
             }
-            aux.getSiguiente(nuevo);
+            aux.setSiguiente(nuevo);
             //la nueva cabeza de la pila pasa a ser nuevo
         }
         tamanio++;
         /*pendiente */
     }
-    //elimina el ultimo nodo de la pila 
-    public void desencolar(){
-        if(!esVacia()){
-            //verificar si hay un solo elemento en la cola 
-            if(cabeza==cola){
-                cabeza = null;
-                cola = null;
-            }else{//hay mas elemento en la cola 
-                //se elimina el primer elemento en la cola
-                //desplazando la cabeza al siguiente 
-                cabeza = cabeza.getSiguiente();  
-
+    /*Inserta un nuevo nodo en la lista 
+     * @param valor: valor a agregar 
+     * @param pos: indica la posicion en donde se insertara el nodo 
+     * @throws: PosicionIlegalException en caso de que la posicion no exista 
+    */
+    public void insertar(T valor, int pos) throws PosicionIlegalException{
+        if(pos>=0 && pos<=tamanio){
+            Nodo<T> nuevo = new Nodo<>();
+            nuevo.setValor(valor);
+            if(pos==0){ //insertar al principio
+                nuevo.setSiguiente(cabeza);
+                cabeza = nuevo;
+            }else{
+                if(pos == tamanio){ //al final
+                    Nodo<T> aux = cabeza;
+                    while(aux.getSiguiente() != null){
+                    aux= aux.getSiguiente();
+                    }
+                    aux.setSiguiente(nuevo);
+                }else{ //en medio
+                    Nodo<T> aux = cabeza;
+                    for(int i =0;i<=pos-2;i++){
+                        aux = aux.getSiguiente();
+                    }
+                    Nodo<T> siguiente = aux.getSiguiente();
+                    aux.setSiguiente(nuevo);
+                    nuevo.setSiguiente(siguiente);
+                }
             }
-            tamanio--;
+            tamanio++;
+        }else{
+            throw new PosicionIlegalException();
         }
     }
+    //elimina un nodo de la lista 
+    //aqui nos quedamos 
+    public void remover(){
+    }
     //regresa el valor del tope de la fila 
-    public T frente(){
+    public T getValor(int pos){
         if(!esVacia()){
             return cabeza.getValor();
         }
