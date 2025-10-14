@@ -24,6 +24,9 @@ public class Principal{
                 case 5:
                 AppQueue.main(args);
                 break;
+                case 6:
+                AppLista.inicio();
+                break;
                 case 0:
                 System.out.println("Chao ");
                 break;
@@ -42,6 +45,7 @@ public class Principal{
         System.out.println("3.- Delimitadores");
         System.out.println("4.- Cola");
         System.out.println("5.- Queue");
+         System.out.println("6.- Lista");
         System.out.println("0.- salir");
         System.out.println();
         System.out.println("Por favor seleccione la opcion deseada");

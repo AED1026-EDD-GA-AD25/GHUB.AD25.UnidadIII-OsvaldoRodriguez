@@ -13,3 +13,4 @@
 ./miPrincipal/AppPila.java
 ./miPrincipal/AppStack.java
 ./miPrincipal/AppQueue.java
+./miPrincipal/AppLista.java
