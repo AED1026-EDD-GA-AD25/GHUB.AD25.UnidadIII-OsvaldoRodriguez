@@ -27,8 +27,11 @@ public class Principal{
                 case 6:
                 AppLista.inicio();
                 break;
+                case 7:
+                AppLinkedListArrayList.inicio();
+                break;
                 case 0:
-                System.out.println("Chao ");
+                System.out.println(" Chao ");
                 break;
                 default:
                 System.out.println("   Opción no válida    ");
@@ -39,14 +42,19 @@ public class Principal{
   }
 
      private static void menu(){
+        System.out.println();
         System.out.println("--- Menu principal ---");
+        System.out.println();
+        System.out.println("------------------------------");
         System.out.println("1.- Pilas");
         System.out.println("2.- Stack");
         System.out.println("3.- Delimitadores");
         System.out.println("4.- Cola");
         System.out.println("5.- Queue");
-         System.out.println("6.- Lista");
-        System.out.println("0.- salir");
+        System.out.println("6.- Lista");
+        System.out.println("7.- LinkedList y ArrayList");
+        System.out.println("------------------------------");
+        System.out.println("0.- Salir");
         System.out.println();
         System.out.println("Por favor seleccione la opcion deseada");
     }

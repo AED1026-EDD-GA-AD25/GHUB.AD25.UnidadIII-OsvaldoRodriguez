@@ -8,6 +8,7 @@
 ./pila/Pila.java
 ./pila/Nodo.java
 ./miPrincipal/AppCola.java
+./miPrincipal/AppLinkedListArrayList.java
 ./miPrincipal/Principal.java
 ./miPrincipal/AppDelimitadores.java
 ./miPrincipal/AppPila.java

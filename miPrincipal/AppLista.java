@@ -20,11 +20,22 @@ public class AppLista {
         System.out.println("Dato en la posicion 2: "+lista.getValor(2));
         System.out.println("Dato en la posicion 3: "+lista.getValor(3));
         System.out.println("Dato en la posicion 4: "+lista.getValor(4));
-        System.out.println("Dato en la posicion 5: "+lista.getValor(5));
+        //System.out.println("Dato en la posicion 5: "+lista.getValor(5));
+        lista.insertar(30,1);
+        System.out.println("El tamaño de la lista: "+lista.getTamanio());
+        for(int i=0;i<lista.getTamanio();i++){
+            System.out.println("Dato en la posicion "+i+": "+lista.getValor(i));
+        }
+        lista.remover(2);
+        System.out.println("El tamaño de la lista: "+lista.getTamanio());
+        for(int i=0;i<lista.getTamanio();i++){
+            System.out.println("Dato en la posicion "+i+": "+lista.getValor(i));
+        }
         }catch(PosicionIlegalException ex){
             System.out.println(ex.getMessage());
         }
 
     }
+    
     
 }
