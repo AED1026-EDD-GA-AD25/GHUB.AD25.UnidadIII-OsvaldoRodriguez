@@ -2,7 +2,7 @@ package miPrincipal;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.ArrayList;
-public class AppLinkedListArrayList {
+public class AppLinkedListArrayList{
     public static void inicio(){
         //Declarar una LinkedList y una ArrayList que contengan valores enteros 
         List<Integer> lista1 = new LinkedList<>();

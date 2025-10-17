@@ -30,6 +30,12 @@ public class Principal{
                 case 7:
                 AppLinkedListArrayList.inicio();
                 break;
+                case 8:
+                DemoCursoEstudiantes.main(args);
+                break;
+                case 9:
+                AppListaDeContactos.main(args);
+                break;
                 case 0:
                 System.out.println(" Chao ");
                 break;
@@ -53,6 +59,8 @@ public class Principal{
         System.out.println("5.- Queue");
         System.out.println("6.- Lista");
         System.out.println("7.- LinkedList y ArrayList");
+        System.out.println("8.- Curso y Estudiantes");
+        System.out.println("9.- Lista de contactos");
         System.out.println("------------------------------");
         System.out.println("0.- Salir");
         System.out.println();
