@@ -1,13 +1,14 @@
-package cola;
+package listaDoble;
 public class Nodo<T>{
     //atributos
     private T valor;
     private Nodo<T> siguiente;
+    private Nodo<T> anterior;//referencia al nodo anterior
     //constructores
     public Nodo(){
         valor =null;
         siguiente = null;
-
+        anterior = null;
     }
     //getter y setter
     public T getValor() {
@@ -22,7 +23,4 @@ public class Nodo<T>{
     public void setSiguiente(Nodo<T> siguiente) {
         this.siguiente = siguiente;
     }
-    
-
-
 }

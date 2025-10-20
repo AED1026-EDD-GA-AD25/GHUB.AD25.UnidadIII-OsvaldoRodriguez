@@ -1,14 +1,16 @@
+./curso/Curso.java
+./curso/Estudiante.java
 ./cola/Cola.java
 ./cola/Nodo.java
 ./miTest/AppTest.java
-./pilas/Delimitadores.java
 ./lista/Lista.java
 ./lista/Nodo.java
 ./lista/PosicionIlegalException.java
+./listaDoble/Nodo.java
+./listaDoble/PosicionIlegalException.java
+./listaDoble/ListaDoble.java
 ./listaDeContactos/ListaDeContactos.java
 ./listaDeContactos/Contacto.java
-./cursos/Curso.java
-./cursos/Estudiante.java
 ./pila/Pila.java
 ./pila/Nodo.java
 ./miPrincipal/AppCola.java
@@ -16,6 +18,7 @@
 ./miPrincipal/DemoCursoEstudiantes.java
 ./miPrincipal/Principal.java
 ./miPrincipal/AppDelimitadores.java
+./miPrincipal/Delimitadores.java
 ./miPrincipal/AppPila.java
 ./miPrincipal/AppListaDeContactos.java
 ./miPrincipal/AppStack.java

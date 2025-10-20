@@ -1,10 +1,10 @@
-package lista;
-public class Lista<T>/* implements iterable */ {
+package listaDoble;
+public class ListaDoble<T>/* implements iterable */ {
     //atributos
     private Nodo<T> cabeza; //como sobre escribo el metodo toString
     private int tamanio;
     //constructores
-    public Lista() {
+    public ListaDoble() {
         cabeza = null;
         tamanio = 0;
     }

@@ -1,9 +1,10 @@
-package cursos;
-
+package curso;
 public class Estudiante {
     private String nombre;
     private String matricula;
     private double promedio;
+    public Estudiante() {
+    }
     public Estudiante(String nombre, String matricula, double promedio) {
         this.nombre = nombre;
         this.matricula = matricula;
@@ -33,6 +34,4 @@ public class Estudiante {
     }
     
 
-
-    
 }

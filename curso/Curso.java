@@ -1,27 +1,27 @@
-package cursos;
+package curso;
 import java.util.List;
 public class Curso {
+    //Atributos
     private String nombreCurso;
     private List<Estudiante> listaEstudiantes;
-    public Curso(String nombrecurso, List<Estudiante> listaEstudiantes) {
-        this.nombreCurso = nombrecurso;
+    //constructores
+    public Curso() {
+    }
+    public Curso(String nombreCurso, List<Estudiante> listaEstudiantes) {
+        this.nombreCurso = nombreCurso;
         this.listaEstudiantes = listaEstudiantes;
     }
-    public String getNombrecurso() {
+    //getter y setter
+    public String getNombreCurso() {
         return nombreCurso;
     }
-    public void setNombrecurso(String nombrecurso) {
-        this.nombreCurso = nombrecurso;
-    }
-    public List<Estudiante> getListaEstudiantes() {
-        return listaEstudiantes;
-    }
-    public void setListaEstudiantes(List<Estudiante> listaEstudiantes) {
-        this.listaEstudiantes = listaEstudiantes;
-    }
+    //métodos personalizados
+    //Agrega un estudiante a la lista
     public void agregarEstudiante(Estudiante e){
         listaEstudiantes.add(e);
+
     }
+    //elimna un estudiante de la lista, si lo encuentra regresa verdero si no falso
     public boolean eliminarEstudiante(String m){
         for(int i=0;i<listaEstudiantes.size();i++){
             if(listaEstudiantes.get(i).getMatricula().equals(m)){
@@ -30,25 +30,38 @@ public class Curso {
             }
         }
         return false;
+
     }
-    //busca un estudiante por matricula, si no encuentra regresa el estudiante, si no regresa null
+    //busca un estudiante por matricula si lo encuentra regresa el estudiante si no regresa null
     public Estudiante buscarEstudiante(String m){
-        /*for(int i=0;i<listaEstudiantes.size();i++){
+        /*
+        for(int i=0;i<listaEstudiantes.size();i++){
             if(listaEstudiantes.get(i).getMatricula().equals(m)){
                return listaEstudiantes.get(i);
             }
-        }*/
+        }
+        return null;
+        */
         for(Estudiante e: listaEstudiantes){
             if(e.getMatricula().equals(m)){
                 return e;
             }
         }
-        return null;//que son los iteradores en java <------
+        return null;
+
+
     }
-    //imprime por consola toda la lista de estudiantes 
+    //imprime por consola toda la lista de estudiantes
     public void listarEstudiantes(){
-        for(Estudiante e: listaEstudiantes){
-            System.out.println(toString());
+        for(Estudiante it:listaEstudiantes){
+            System.out.println(it);
         }
+
+
     }
+
+    
+    
+
+    
 }
