@@ -45,6 +45,7 @@ public class ListaDoble<T>/* implements iterable */ {
                 aux= aux.getSiguiente();
             }
             aux.setSiguiente(nuevo);
+            nuevo.setAnterior(aux);//Es una linea nueva respecto a la linea simple 
             //la nueva cabeza de la pila pasa a ser nuevo
         }
         tamanio++;
@@ -69,6 +70,8 @@ public class ListaDoble<T>/* implements iterable */ {
                     aux= aux.getSiguiente();
                     }
                     aux.setSiguiente(nuevo);
+                    nuevo.setAnterior(aux);//esta es una nueva linea respecto al anterior
+
                 }else{ //en medio
                     Nodo<T> aux = cabeza;
                     for(int i =0;i<=pos-2;i++){
@@ -77,6 +80,9 @@ public class ListaDoble<T>/* implements iterable */ {
                     Nodo<T> siguiente = aux.getSiguiente();
                     aux.setSiguiente(nuevo);
                     nuevo.setSiguiente(siguiente);
+                    nuevo.setAnterior(aux);//linea nueva respecto a la lista
+                    siguiente.setAnterior(nuevo);//linea nueva respecto a la lista simple 
+
                 }
             }
             tamanio++;
@@ -86,7 +92,7 @@ public class ListaDoble<T>/* implements iterable */ {
     }
     //elimina un nodo de la lista 
     /*
-    Elimina un nodo en determinda posicion
+    Elimina un nodo en determinada posicion
     @param pos: posicion a eliminar 
     @throws PosinionIlegalException 
      */ 
@@ -94,14 +100,18 @@ public class ListaDoble<T>/* implements iterable */ {
         if(pos>=0 && pos<tamanio){//posicion correcta
             if(pos ==0){
                 cabeza = cabeza.getSiguiente();
+                cabeza.setAnterior(null);////Esta es una nueva linea que se inserto
                 tamanio--;
             }else{//elimina al final o en medio
                 Nodo<T> aux = cabeza;
                 for(int i=1;i<=pos-2;i++){
                     aux = aux.getSiguiente();
+
                 }
                 Nodo<T> prox = aux.getSiguiente();
+                prox.getSiguiente().setAnterior(aux);//Nueva linea se inserta respecto a la lista simple 
                 aux.setSiguiente(prox.getSiguiente());
+
                 tamanio--;
             } 
         }else{//posicion incorrecta 

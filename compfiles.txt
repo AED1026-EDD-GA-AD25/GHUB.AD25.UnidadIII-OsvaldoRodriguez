@@ -18,6 +18,7 @@
 ./miPrincipal/DemoCursoEstudiantes.java
 ./miPrincipal/Principal.java
 ./miPrincipal/AppDelimitadores.java
+./miPrincipal/AppListaDoble.java
 ./miPrincipal/Delimitadores.java
 ./miPrincipal/AppPila.java
 ./miPrincipal/AppListaDeContactos.java
