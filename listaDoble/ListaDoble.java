@@ -61,6 +61,7 @@ public class ListaDoble<T>/* implements iterable */ {
             Nodo<T> nuevo = new Nodo<>();
             nuevo.setValor(valor);
             if(pos==0){ //insertar al principio
+                cabeza.setAnterior(nuevo); //linea nueva respecto a la lista simple
                 nuevo.setSiguiente(cabeza);
                 cabeza = nuevo;
             }else{
@@ -103,16 +104,25 @@ public class ListaDoble<T>/* implements iterable */ {
                 cabeza.setAnterior(null);////Esta es una nueva linea que se inserto
                 tamanio--;
             }else{//elimina al final o en medio
-                Nodo<T> aux = cabeza;
-                for(int i=1;i<=pos-2;i++){
+                if (pos == tamanio -1) {
+                    Nodo<T> aux = cabeza;
+                    for(int i=1;i<=pos-2;i++){
                     aux = aux.getSiguiente();
-
                 }
                 Nodo<T> prox = aux.getSiguiente();
-                prox.getSiguiente().setAnterior(aux);//Nueva linea se inserta respecto a la lista simple 
                 aux.setSiguiente(prox.getSiguiente());
-
                 tamanio--;
+                }else{
+                    Nodo<T> aux = cabeza;
+                    for(int i=1;i<=pos-2;i++){
+                        aux = aux.getSiguiente();
+                    }
+                    Nodo<T> prox = aux.getSiguiente();
+                    prox.getSiguiente().setAnterior(aux);//Nueva linea que se inserto
+                    aux.setSiguiente(prox.getSiguiente());
+                    tamanio--;
+                }
+                //prox.getSiguiente().setAnterior(aux);//Nueva linea se inserta respecto a la lista simple  
             } 
         }else{//posicion incorrecta 
             throw new PosicionIlegalException();
