@@ -39,6 +39,9 @@ public class Principal{
                 case 10:
                 AppListaDoble.inicio();
                 break;
+                case 11:
+                AppHashMap.inicio();
+                break;
                 case 0:
                 System.out.println(" Chao ");
                 break;
@@ -65,6 +68,7 @@ public class Principal{
         System.out.println("8.- Curso y Estudiantes");
         System.out.println("9.- Lista de contactos");
         System.out.println("10.- Lista Doblemente enlazada");
+        System.out.println("11.- Demostracion Hash Map");
         System.out.println("------------------------------");
         System.out.println("0.- Salir");
         System.out.println();
