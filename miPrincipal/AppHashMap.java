@@ -20,6 +20,7 @@ public class AppHashMap {
         System.out.println(hm.get("Juan"));
         System.out.println(hm.get("Pedro"));
         System.out.println(hm.get("Ronaldo"));
+        System.out.println();
 
         System.out.println("Recorro la estructura utilizando iteradores");
         Iterator<Map.Entry<String,Persona>> ite = hm.entrySet().iterator();
@@ -27,11 +28,13 @@ public class AppHashMap {
             Map.Entry<String, Persona> entrada = ite.next();
             System.out.println(entrada.getKey()+" = "+entrada.getValue());
         }
+        System.out.println();
         System.out.println("Recorro la estructura utilizando for");
         for(Map.Entry<String,Persona> entrada:hm.entrySet()){
             System.out.println(entrada.getKey()+" = "+entrada.getValue());
         }
         System.out.println(hm);
+        System.out.println();
     }
     public static void main(String[] args) {
         inicio();

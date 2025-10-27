@@ -3,6 +3,7 @@
 ./cola/Cola.java
 ./cola/Nodo.java
 ./hashMap/Persona.java
+./hashMap/HashMapCombinada.java
 ./miTest/AppTest.java
 ./lista/Lista.java
 ./lista/Nodo.java
@@ -16,6 +17,7 @@
 ./pila/Nodo.java
 ./miPrincipal/AppCola.java
 ./miPrincipal/AppLinkedListArrayList.java
+./miPrincipal/AppHashMapCombinado.java
 ./miPrincipal/Demostracion.java
 ./miPrincipal/DemoCursoEstudiantes.java
 ./miPrincipal/Principal.java

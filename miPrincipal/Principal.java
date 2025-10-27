@@ -42,6 +42,9 @@ public class Principal{
                 case 11:
                 AppHashMap.inicio();
                 break;
+                case 12:
+                AppHashMapCombinado.inicio();
+                break;
                 case 0:
                 System.out.println(" Chao ");
                 break;
@@ -69,8 +72,9 @@ public class Principal{
         System.out.println("9.- Lista de contactos");
         System.out.println("10.- Lista Doblemente enlazada");
         System.out.println("11.- Demostracion Hash Map");
+        System.out.println("12.- Demostracion Hash Map Combinado");
         System.out.println("------------------------------");
-        System.out.println("0.- Salir");
+        System.out.println("0.- Salir\n");
         System.out.println();
         System.out.println("Por favor seleccione la opcion deseada");
     }
